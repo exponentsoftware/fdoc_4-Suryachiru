@@ -1,0 +1,285 @@
+@import 'utilities.css';
+:root{
+    --primary:#3DCFD3;
+    --dark:#161616;
+    --pure:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+    --secondary:#070606;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+}
+
+header{
+    background: var(--dark);
+    height: 800px;
+}
+.container{
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+header nav .left a{
+    color: var(--pure);
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition: all .3 ease;
+    -webkit-transition: all .3 ease;
+    -moz-transition: all .3 ease;
+    -ms-transition: all .3 ease;
+    -o-transition: all .3 ease;
+}
+header nav .left a:hover{
+    color: var(--primary);
+}
+header nav {
+    padding: 2rem 0;
+}
+
+header nav .branding{
+    margin-right: 3rem;
+}
+.hero .left img {
+    width: 850px;
+}
+.hero .right {
+    color: var(--pure);
+}
+.hero .right h6{
+    font-size:1.0rem;
+}
+section{
+    padding: 2rem 0;
+}
+ section.about .about-me-img {
+     height: 450px;
+ }
+ section.about h1 {
+     margin-bottom: 1rem;
+     font-size:1.6rem;
+     font-weight: 400;
+ }
+ section.about h1 span {
+     color: var(--primary);
+ }
+ section.about h3{
+     font-size: 1rem;
+     margin-bottom: 1rem;
+     font-weight: 400;
+ }
+ section.about .social {
+    display: flex;
+ }
+
+ section.about .social a{
+     background: var(--dark);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     -ms-border-radius: 50%;
+     -o-border-radius: 50%;
+     margin-right: 0.6rem;
+ }
+ section.about .social a:hover{
+     background-color: var(--primary);
+ }
+ section.about .social a img {
+ width: 100%;
+ height: 100%;
+ padding: 0.5rem;
+ }
+
+ .section-heading {
+     color:var(--secondary);
+     text-align: center;
+     margin-bottom: 1rem;
+     line-height: 0.5;
+ }
+ .section-heading span{
+     color: var(--primary);
+ }
+ .section-heading +p{
+     color: var(--ternary);
+     margin-bottom: 7rem;
+     text-align: center;
+ }
+section.services{
+    background: var(--light);
+}
+
+ section.services .card-wrapper{
+     display:grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-column-gap: 3rem;
+ }
+ section.services .card-wrapper .card{
+     background: var(--pure);
+     padding: 3rem 2rem;
+     position: relative;
+     text-align: center;
+     padding-top: 6rem;
+ }
+ section.services .card-wrapper .card img{
+     position: absolute;
+     top:-3.5rem;
+     left:50%;
+     transform: translateX(-50%);
+     -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+     -o-transform: translateX(-50%);
+ }
+ section.services .card-wrapper .card:hover{
+     background: var(--dark);
+ }
+ section.services .card-wrapper .card:hover h2, section.services .card-wrapper .card:hover p{
+     color: var(--pure);
+ }
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  html,body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: #6665ee;
+  }
+  ::selection{
+    color: #fff;
+    background: #6665ee;
+  }
+  .skill-bars{
+    padding: 25px 30px;
+    width: 600px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+  .skill-bars .bar{
+    margin: 20px 0;
+  }
+  .skill-bars .bar:first-child{
+    margin-top: 0px;
+  }
+  .skill-bars .bar .info{
+    margin-bottom: 5px;
+  }
+  .skill-bars .bar .info span{
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+  }
+  @keyframes showText {
+    100%{
+      opacity: 1;
+    }
+  }
+  .skill-bars .bar .progress-line{
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+                0 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  @keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+  }
+  .bar .progress-line span{
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #6665ee;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  .bar .progress-line.html span{
+    width: 90%;
+  }
+  .bar .progress-line.css span{
+    width: 60%;
+  }
+  .bar .progress-line.jquery span{
+    width: 85%;
+  }
+  .bar .progress-line.python span{
+    width: 50%;
+  }
+  .bar .progress-line.mysql span{
+    width: 75%;
+  }
+  .progress-line span::before{
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  .progress-line span::after{
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  @keyframes showText2 {
+    100%{
+      opacity: 1;
+    }
+  }
+  .progress-line.html span::after{
+    content: "90%";
+  }
+  .progress-line.css span::after{
+    content: "85%";
+  }
+  .progress-line.jquery span::after{
+    content: "80%";
+  }
+  .progress-line.python span::after{
+    content: "60%";
+  }
+  .progress-line.mysql span::after{
+    content: "75%";
+  }
